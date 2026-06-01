@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tic Tac Toe</title>
+    <link rel="icon" href="./icons/tic-tac-toe.png" type="image/x-icon" />
+  </head>
+  <body class="bg-slate-950">
+    <div class="bg-slate-900 header">Tic Tac Toe</div>
+
+    <div class="game-ui bg-slate-900 border-2 border-slate-700">
+      <img src="/images/crown.png" class="crown hidden" />
+      <div class="player-panel">
+        <div>
+          <svg
+            class="avatar player-one"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M11.5,14C15.64,14 19,15.57 19,17.5V20H4V17.5C4,15.57 7.36,14 11.5,14M18,17.5C18,16.12 15.09,15 11.5,15C7.91,15 5,16.12 5,17.5V19H18V17.5M11.5,5C13.43,5 15,6.57 15,8.5C15,10.43 13.43,12 11.5,12C9.57,12 8,10.43 8,8.5C8,6.57 9.57,5 11.5,5M11.5,6C10.12,6 9,7.12 9,8.5C9,9.88 10.12,11 11.5,11C12.88,11 14,9.88 14,8.5C14,7.12 12.88,6 11.5,6Z"
+            />
+          </svg>
+        </div>
+        <div class="flex w-40">
+          <input
+            readonly
+            type="text"
+            class="name-input"
+            minlength="3"
+            maxlength="10"
+          />
+          <button class="rename-btn w-8 h-8 bg-green-700">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>Edit name</title>
+              <path
+                d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <p class="symbol-info">Symbol: X</p>
+      </div>
+      <p class="game-status"></p>
+      <div class="gameboard">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <img src="/images/crown.png" class="crown hidden" />
+      <div class="player-panel">
+        <div>
+          <svg
+            class="avatar player-two"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M11.5,14C15.64,14 19,15.57 19,17.5V20H4V17.5C4,15.57 7.36,14 11.5,14M18,17.5C18,16.12 15.09,15 11.5,15C7.91,15 5,16.12 5,17.5V19H18V17.5M11.5,5C13.43,5 15,6.57 15,8.5C15,10.43 13.43,12 11.5,12C9.57,12 8,10.43 8,8.5C8,6.57 9.57,5 11.5,5M11.5,6C10.12,6 9,7.12 9,8.5C9,9.88 10.12,11 11.5,11C12.88,11 14,9.88 14,8.5C14,7.12 12.88,6 11.5,6Z"
+            />
+          </svg>
+        </div>
+        <div class="flex w-40">
+          <input
+            readonly
+            type="text"
+            class="name-input"
+            minlength="3"
+            maxlength="10"
+          />
+          <button class="rename-btn w-8 h-8 bg-green-700">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>Edit name</title>
+              <path
+                d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <p class="symbol-info">Symbol: O</p>
+      </div>
+    </div>
+    <button class="hidden restart-btn">Restart game</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
